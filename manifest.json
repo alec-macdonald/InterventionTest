@@ -1,0 +1,24 @@
+{
+    "name": "Intervention Test",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://www.facebook.com/*",
+            "http://www.facebook.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus",
+        "notifications"
+    ]
+}
